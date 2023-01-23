@@ -14,7 +14,7 @@ jobs:
       uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
         # username
-        username: github
+        username: root
         # your sftp server
         server: alzii.me
         # your sftp server port, default to 22
