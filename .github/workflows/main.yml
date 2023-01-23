@@ -14,11 +14,11 @@ jobs:
         # Port of SSH Protocol
         PORT: 22
         # Username of SSH user
-        USERNAME: ${{ SECRETS.SSH_USER }}
+        USERNAME: ${{ secrets.SSH_USER }}
         # SSH Private Key
-        PRIVATE_KEY: ${{ SECRETS.KEY }}
+        PRIVATE_KEY: ${{ secrets.KEY }}
         # Folder to be transferred
-        SOURCE: src
+        SOURCE: 'src'
         # Exlude paths or file in source folder with glob features
         EXCLUDE: # optional
         # Using zip for stability at transfer, file name of zip
