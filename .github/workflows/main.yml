@@ -4,26 +4,28 @@ jobs:
   SSHDeploy:
     runs-on: ubuntu-latest
     steps:
-    - name: SSH Push
+    - name: SFTP Deploy
       # You may pin to the exact commit or the version.
-      # uses: ErenKrt/ssh-push@cad78a18fe254e919c7232134c73e6d02773cbae
-      uses: ErenKrt/ssh-push@1.0
+      # uses: wlixcc/SFTP-Deploy-Action@da88a4dbe95286266bbac3c0b2b8284048d20c8f
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
-        # IP Address of remote host
-        HOST: alzii.me
-        # Port of SSH Protocol
-        PORT: 22
-        # Username of SSH user
-        USERNAME: ${{ secrets.SSH_USER }}
-        # SSH Private Key
-        PRIVATE_KEY: ${{ secrets.KEY }}
-        # Folder to be transferred
-        SOURCE: 'src'
-        # Exlude paths or file in source folder with glob features
-        EXCLUDE: # optional
-        # Using zip for stability at transfer, file name of zip
-        ZIPNAME: # optional, default is build.zip
-        # Remote host path to copy zip
-        OUTDIR: '/opt/var/www'
-        # Execute commands after transfer source file
-        SCRIPTS: # optional
+        # username
+        username: github
+        # your sftp server
+        server: alzii.me
+        # your sftp server port, default to 22
+        port: # default is 22
+        # you can copy private_key from your *.pem file, keep format
+        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        # will put all file under this path
+        local_path: src/
+        # files will copy to under remote_path
+        remote_path: /var/www
+        # connection via sftp protocol only
+        sftp_only: # optional
+        # sftp args
+        sftpArgs: # optional
+        # This operation will delete all files in the remote path before upload. Please be careful set this to true
+        delete_remote_files: # optional
+        # SSH passsword，If a password is set, the secret key pair is ignored
+        password: # optional
