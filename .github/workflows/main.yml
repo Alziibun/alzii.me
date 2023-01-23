@@ -1,0 +1,29 @@
+name: Deploy to Server
+on: [push]
+jobs:
+  SSHDeploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: SSH Push
+      # You may pin to the exact commit or the version.
+      # uses: ErenKrt/ssh-push@cad78a18fe254e919c7232134c73e6d02773cbae
+      uses: ErenKrt/ssh-push@1.0
+      with:
+        # IP Address of remote host
+        HOST: alzii.me
+        # Port of SSH Protocol
+        PORT: 22
+        # Username of SSH user
+        USERNAME: ${{ SECRETS.SSH_USER }}
+        # SSH Private Key
+        PRIVATE_KEY: ${{ SECRETS.KEY }}
+        # Folder to be transferred
+        SOURCE: src
+        # Exlude paths or file in source folder with glob features
+        EXCLUDE: # optional
+        # Using zip for stability at transfer, file name of zip
+        ZIPNAME: # optional, default is build.zip
+        # Remote host path to copy zip
+        OUTDIR: '/opt/var/www'
+        # Execute commands after transfer source file
+        SCRIPTS: # optional
