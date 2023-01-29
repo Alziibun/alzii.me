@@ -24,4 +24,4 @@ jobs:
         # will put all file under this path
         local_path: ./src/*
         # files will copy to under remote_path
-        remote_path: /var/www/virtu.alzii.me
+        remote_path: /var/www/
