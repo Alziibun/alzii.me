@@ -8,7 +8,7 @@ const users = new Pool({
     database: process.env.DB_USERDATA
 });
 
-async function create_user(username, password, email) {
+async function createUser(username, password, email) {
     let valid = true;
     let client = await users.connect();
     bcrypt.genSalt(10, (err, salt) => {
@@ -26,7 +26,7 @@ async function create_user(username, password, email) {
     return valid;
 }
 
-async function getUserByID(userid) {
+async function fetchUserByID(userid) {
     let result = {};
     let client = await users.connect();
     client
@@ -37,12 +37,35 @@ async function getUserByID(userid) {
         })
         .catch((err) => {
             console.error('Unexpected error occured', err.stack)
+            client.release(true);
         });
-
     return result;
 }
 
+async function fetchUserByName(username) {
+    let result = {};
+    let client = await users.connect();
+    client
+        .query('SELECT * FROM users WHERE username = $1', [username])
+        .then((res) => {
+            result = res.rows[0]
+            client.release(true);
+        })
+        .catch((err) => {
+            console.error('Unexpected error occured', err.stack)
+            client.release(true);
+        })
+}
+
+async function fetchAllUsers() {
+    let result = {};
+    let client = await users.connect();
+    client
+        .query('SELECT * FROM users')
+}
+
 exports = {
-    create_user : create_user,
-    getUserByID : getUserByID,
+    createUser : createUser,
+    fetchUserByID : fetchUserByID,
+    fetchUserByName : fetchUserByName
 }
