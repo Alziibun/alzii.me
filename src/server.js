@@ -1,7 +1,7 @@
 const vhost = require('vhost');
 const express = require('express');
 
-express()
+const app = express()
     .use(vhost('babbit.alzii.me', require('./private/config/babbit').app))
     .use(vhost('alzii.me', require('./private/config/home').app))
     .listen(8080);
