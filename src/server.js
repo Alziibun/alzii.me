@@ -7,10 +7,9 @@ const app = express();
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views' )
 
-//Load every domain
 const babbit = express.Router()
 babbit.get('/', (req, res) => {
-    res.send('pages/index')
+    res.render('pages/index')
 })
 
 const main = express.Router()
@@ -22,5 +21,5 @@ app.use(main)
 app.use(subdomain('babbit', babbit))
 
 app.listen(8080, () => {
-    console.log(`Listening on ${os.hostname}:8080`)
+    console.log(`Listening on port 8080`)
 });
