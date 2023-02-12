@@ -1,0 +1,33 @@
+{
+    "guides": [
+        {
+            "name": "luciel",
+            "paths": [
+                [
+                    {"name":"Chiliarch",
+                        "skills":[
+                            {
+                                "name":"Terror Chain",
+                                "note":"One of Catastrophe's double switch skills, allowing you more versatility in your kit.",
+                                "pve":[true, "I like using it in PvE for now, but it's been a while since I played."],
+                                "pvp":[false, "I have not used it in pvp so I cannot say."]
+                            },
+                            {
+                                "name":"Ruinous Impact",
+                                "note":"Colloquial to a shaped nuclear blast, this skill is infamous for its insane damage and its ability to ignore all defense properties.",
+                                "pve":[true, "It's a crime not to use this for PvE"],
+                                "pvp":[true, "This skill is a win condition if you become good at timing it, but keep in mind it's a double-edged sword that leaves you highly vulnerable and the short range makes it difficult to land without having advantage.  Don't use without having advantage!"]
+                            },
+                            {
+                                "name":"Dark Crescent",
+                                "note":"It slashes in a big circle around {Ciel}.  The biggest benefit of this skill is for defensive play or chaining from {Chiliarch}'s <Ruinous Impact> to make the skill (Chase), though the likelyhood of a non-boss enemy surviving <Ruinous Impact> is low.",
+                                "pve":[true, "Personally, I'd keep it off the bar and chain it off <Ruinous Impact> just to get a swap, otherwise I wouldn't bother going for it if you have other options"],
+                                "pvp":[true, "It's a good skill for enforcing your zone, since the hitbox is an instant circle and can be used mid-air to protect yourself when airborne."]
+                            }
+                        ]
+                    }
+                ]
+            ]
+        }
+    ]
+}
