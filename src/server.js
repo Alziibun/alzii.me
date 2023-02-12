@@ -9,7 +9,7 @@ app.set('views', __dirname + '/views' )
 
 const babbit = express.Router()
 babbit.get('/', (req, res) => {
-    res.render('pages/index')
+    res.render('pages/babbit/index')
 })
 
 const main = express.Router()
@@ -20,6 +20,6 @@ main.get('/', (req, res) => {
 app.use(main)
 app.use(subdomain('babbit', babbit))
 
-app.listen(8080, () => {
+app.listen(52, () => {
     console.log(`Listening on port 8080`)
 });
