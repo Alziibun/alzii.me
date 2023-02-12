@@ -8,7 +8,7 @@ app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views' )
 
 const babbit = express.Router()
-babbit.get('/babbit', (req, res) => {
+babbit.get('/', (req, res) => {
     res.render('pages/babbit/index')
 })
 
