@@ -26,6 +26,6 @@ app.use(main)
 app.use(subdomain('babbit', babbit))
 app.use(subdomain('elsword', elsword))
 
-app.listen(52, () => {
-    console.log(`Listening on port 52`)
+app.listen(80, () => {
+    console.log(`Listening on port 80`)
 });
