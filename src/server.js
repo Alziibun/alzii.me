@@ -8,8 +8,13 @@ app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views' )
 
 const babbit = express.Router()
-babbit.get('/', (req, res) => {
+babbit.get('/babbit', (req, res) => {
     res.render('pages/babbit/index')
+})
+
+const elsword = express.Router()
+elsword.get('/', (req, res) => {
+    res.render('pages/elsword/index')
 })
 
 const main = express.Router()
@@ -19,7 +24,8 @@ main.get('/', (req, res) => {
 
 app.use(main)
 app.use(subdomain('babbit', babbit))
+app.use(subdomain('elsword', elsword))
 
 app.listen(52, () => {
-    console.log(`Listening on port 8080`)
+    console.log(`Listening on port 52`)
 });
