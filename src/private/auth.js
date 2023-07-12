@@ -1,5 +1,6 @@
 const db = require('db.js');
 const bcrypt = require('bcrypt');
+const session = require('express-session');
 class User {
     constructor(id) {
         this = db.getUserByID(id);
@@ -7,6 +8,12 @@ class User {
 
     get identifier() {
         return `${this.username}#${this.discriminator}`;
+    }
+}
+
+class Group {
+    constructor(id) {
+
     }
 }
 

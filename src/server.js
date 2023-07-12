@@ -11,6 +11,9 @@ const babbit = express.Router()
 babbit.get('/', (req, res) => {
     res.render('pages/babbit/index')
 })
+babbit.get('/user/*', (req, res, next) => {
+    res.end('Feature WIP')
+})
 
 const elsword = express.Router()
 elsword.get('/', (req, res) => {

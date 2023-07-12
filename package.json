@@ -1,5 +1,9 @@
 {
   "dependencies": {
+    "@twurple/api": "^6.0.3",
+    "@twurple/auth": "^6.0.3",
+    "@twurple/eventsub": "^5.3.4",
+    "@twurple/eventsub-http": "^6.0.3",
     "dotenv": "^16.0.3"
   }
 }
