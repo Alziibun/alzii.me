@@ -22,7 +22,7 @@ elsword.get('/', (req, res) => {
 
 const main = express.Router()
 main.get('/', (req, res) => {
-    res.render('pages/index')
+    res.render('pages/index', {links: JSON.parse(fs.readFile("./private/socials.json"))})
 })
 
 app.use(main)

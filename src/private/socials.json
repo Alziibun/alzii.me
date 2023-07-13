@@ -1,0 +1,58 @@
+{
+    "content" : [
+        {
+            "name" : "Twitch",
+            "href" : "https://twitch.tv/alzii",
+            "icon" : null
+        },
+        {
+            "name" : "YouTube",
+            "href" : "https://www.youtube.com/channel/UCGjsagOSQq6MA9P5IOWrPRQ",
+            "icon" : null
+        },
+        {
+            "name" : "TikTok",
+            "href" : null,
+            "icon" : null
+        }
+    ],
+    "social" : [
+        {
+            "name" : "Twitter",
+            "href" : "https://twitter.com/butterbuny",
+            "icon" : null
+        },
+        {
+            "name" : "Tumblr",
+            "href" : "https://www.tumblr.com/alziibun",
+            "icon" : null
+        },
+        {
+            "name" : "Threads",
+            "href" : "https://www.threads.net/@alziibun",
+            "icon" : null
+        },
+        {
+            "name" : "Instagram",
+            "href" : "https://www.instagram.com/alziibun/",
+            "icon" : null
+        }
+    ],
+    "portfolio" : [
+        {
+            "name" : "GitHub",
+            "href" : "https://github.com/Alziibun",
+            "icon" : null
+        },
+        {
+            "name" : "Dribbble",
+            "href" : "https://dribbble.com/Alzii",
+            "icon" : null
+        },
+        {
+            "name" : "Fiverr",
+            "href" : "https://www.fiverr.com/rabbytes",
+            "icon" : null
+        }
+    ]
+}
