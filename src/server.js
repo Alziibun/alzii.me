@@ -17,7 +17,8 @@ babbit.get('/user/*', (req, res, next) => {
 
 const elsword = express.Router()
 elsword.get('/', (req, res) => {
-    res.render('pages/elsword/index')
+    let rawdata = fs.readFileSync('private/socials.json')
+    res.render('pages/elsword/index', {links: JSON.parse(rawdata)})
 })
 
 const main = express.Router()
