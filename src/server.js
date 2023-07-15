@@ -18,12 +18,12 @@ babbit.get('/user/*', (req, res, next) => {
 const elsword = express.Router()
 elsword.get('/', (req, res) => {
     let rawdata = fs.readFileSync('private/socials.json')
-    res.render('pages/elsword/index', {links: JSON.parse(rawdata)})
+    res.render('pages/elsword/index')
 })
 
 const main = express.Router()
 main.get('/', (req, res) => {
-    res.render('pages/index', {links: JSON.parse(fs.readFile("./private/socials.json"))})
+    res.render('pages/index', {links: JSON.parse(fs.readFileSync("./private/socials.json"))})
 })
 
 app.use(main)
