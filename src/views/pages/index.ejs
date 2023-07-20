@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <h1>Alzii</h1>
-    <ul>
-        <li>Content Creator</li>
-        <li>Graphic Designer</li>
-        <li>Programmer</li>
-    </ul>
-    <hr>
-    <div id="about">
-        <h2>About me</h2>
-        <p>
-            Hey!  I'm Alzii, a freelancer by trade.  Check out my pages for more info.
-        </p>
-    </div>
-    <%- include('../partials/socials.ejs', {links: links}) %>
+    <head>
+        <link href="main.css" type="css">
+    </head>
+    <body>
+        <h1>Alzii</h1>
+        <ul>
+            <li>Content Creator</li>
+            <li>Graphic Designer</li>
+            <li>Programmer</li>
+        </ul>
+        <hr>
+        <div id="about">
+            <h2>About me</h2>
+            <p>
+                Hey!  I'm Alzii, a freelancer by trade.  Check out my pages for more info.
+            </p>
+        </div>
+        <%- include('../partials/socials.ejs', {links: links}) %>
+    </body>
 </html>
