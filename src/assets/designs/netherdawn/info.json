@@ -1,0 +1,11 @@
+[
+    {
+        "type" : "Overlay",
+        "date" : null,
+        "links" : {
+            "twitch" : "netherdawn"
+        },
+        "motif" : "Lava, Forge, Everlasting Flame",
+        "comment" : "A semi-minimalistic overlay for Netherdawn.  I'm pretty happy about how this one turned out and I'd love to make more like it."
+    }
+]
