@@ -1,12 +1,12 @@
-<table id="social">
+<ul id="social">
     <% for (let [key, value] of Object.entries(links)) { %>
-        <tr>
-            <th id="<%- key %>"><%- key %></th>
-            <% value.forEach(function(info) { %>
-                <tr id="<%- info.name.toLowerCase() %>">
-                    <a href="<%- info.href %>"><%- info.name %></a>
-                </tr>
-            <% }); %>
-        </tr>
+    <li><%- key %>
+        <ul id="<%- key %>">
+        <% value.forEach(function(info) { %>
+            <li id="<%- info.name.toLowerCase() %>">
+                <a href="<%- info.href %>"><%- info.name %></a>
+            </li>
+        <% }); %>
+        </ul>
     <% }; %>
-</table>
+</ul>
