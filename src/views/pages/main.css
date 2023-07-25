@@ -1,7 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap');
 
-h1 {
+/* TODO: find better hexes for each web color... */
+body {
+    color: whitesmoke;
+    background-color: darkslateblue;
+}
+
+h1#logo {
     font-family:"Merriweather" sans-serif;
+    align-self: center;
+    font-size: 36px;
+}
+
+hr {
+    align-self: center;
+}
+
+#subtitle {
+    list-style: none;
+}
+#subtitle li {
+    color: black;
+    font-weight: normal;
+}
+#subtitle li:hover {
+    color: grey;
+    font-weight: bold;
 }
 
 table#social th {
