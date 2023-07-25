@@ -1,34 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap');
 
-/* TODO: find better hexes for each web color... */
 body {
+    /* TODO: give accurate hex values */
     color: whitesmoke;
-    background-color: darkslateblue;
+    background: darkslateblue;
 }
 
-h1#logo {
-    font-family:"Merriweather" sans-serif;
-    align-self: center;
-    font-size: 36px;
+.container {
+    display: grid;
+    grid-template-columns: 1fr 75% 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        ". | title | ."
+        ". | content | ."
+        ". | footer | .";
 }
 
-hr {
-    align-self: center;
+h1#title {
+    grid-area: title;
+    align-content: center;
 }
 
-#subtitle {
+ul#subtitle {
+    align-content: center;
     list-style: none;
 }
-#subtitle li {
-    color: black;
-    font-weight: normal;
-}
-#subtitle li:hover {
-    color: grey;
-    font-weight: bold;
-}
 
-table#social th {
-    font-family: "Arial";
-    
+ul#subtitle li {
+    color: inherit;
+}
+ul#subtitle li:hover {
+    color: hsl(from color 0 0 12); /* dunno how this actually works, check back after test. */
 }
