@@ -22,8 +22,8 @@ elsword.get('/', (req, res) => {
 })
 
 const main = express.Router()
-main.get('/', (req, res) => {
-    res.render('pages/index', {links: JSON.parse(fs.readFileSync("./private/socials.json"))})
+main.get('/*', (req, res) => {
+    res.render('pages/default/*', {links: JSON.parse(fs.readFileSync("./private/socials.json"))})
 })
 
 app.use(main)
