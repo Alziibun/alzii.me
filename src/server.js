@@ -1,12 +1,13 @@
 const express = require('express');
 const subdomain = require('express-subdomain');
+const path = require('path');
 const fs = require('fs');
 const os = require('os');
 
 const app = express();
 app.set('view engine', 'ejs')
 // set default includes as partials
-app.set('views', __dirname + '/views', __dirname + '/views/partials/')
+app.set('views', __dirname + '/views')
 
 const babbit = express.Router()
 babbit.get('/', (req, res) => {
@@ -23,7 +24,7 @@ elsword.get('/', (req, res) => {
 
 const main = express.Router()
 main.get('/*', (req, res) => {
-    res.render('pages/default/' + req.path, {links: JSON.parse(fs.readFileSync("./private/socials.json"))})
+    res.render(path.join('pages/default/', req.path), {links: JSON.parse(fs.readFileSync("./private/socials.json"))})
 })
 
 app.use(main)
