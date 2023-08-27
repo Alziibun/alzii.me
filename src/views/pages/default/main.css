@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap');
 
 body {
-    /* TODO: give accurate hex values */
     color: whitesmoke;
-    background: darkslateblue;
+    background: rgb(11, 5, 45);
 }
 
 .container {
