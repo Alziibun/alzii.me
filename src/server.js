@@ -8,7 +8,7 @@ const app = express();
 app.set('view engine', 'ejs')
 // set default includes as partials
 app.set('views', __dirname + '/views')
-app.set(express.static(__dirname + '/public'))
+app.set('/public', express.static('public'))
 
 const babbit = express.Router()
 babbit.get('/', (req, res) => {
